@@ -32,7 +32,8 @@
 #include "gtest/gtest.h"
 
 GTEST_API_ int main(int argc, char **argv) {
-  printf("Running main() from gtest_main.cc\n");
+  sprintf(output, "Running main() from gtest_main.cc\n");
+  OutputDebugString(output);
   testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
